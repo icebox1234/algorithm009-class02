@@ -69,7 +69,7 @@ var inorderTraversal_2 = function (root) {
  * @时间复杂度 O(N)
  * @空间复杂度 O(N)
  */
-var inorderTraversal = function (root) {
+var inorderTraversal_3 = function (root) {
     let res = [];
     let stack = [];
     if (root !== null) {
@@ -89,6 +89,33 @@ var inorderTraversal = function (root) {
         } else {
             res.push(stack[stack.length - 1].val);
             stack.pop();
+        }
+    }
+    return res;
+};
+
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ * @时间复杂度 O(N)
+ * @空间复杂度 O(N)
+ */
+var inorderTraversal = function (root) {
+    let res = [];
+    let ptr = null;
+    while (root !== null) {
+        if (root.left !== null) {
+            ptr = root.left;
+            while (ptr.right !== null) {
+                ptr = ptr.right;
+            }
+            let temp = root;
+            ptr.right = root;
+            root = root.left;
+            temp.left = null;
+        } else {
+            res.push(root.val);
+            root = root.right;
         }
     }
     return res;
