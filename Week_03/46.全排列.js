@@ -9,7 +9,7 @@
  * @param {number[]} nums
  * @return {number[][]}
  * @时间复杂度 O(N*N!)
- * @空间复杂度 O(N)
+ * @空间复杂度 O(N*N!)
  */
 var permute = function (nums) {
     let res = [];
