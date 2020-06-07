@@ -16,6 +16,8 @@
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
+ * @时间复杂度  O(N) 构造树需要遍历每一个节点
+ * @空间复杂度  O(N^2) 每次向下递归时，要保存其余的n-1个节点 
  */
 var buildTree = function (preorder, inorder) {
     if (preorder.length <= 0 || inorder.length <= 0) {

@@ -17,6 +17,8 @@
  * @param {TreeNode} p
  * @param {TreeNode} q
  * @return {TreeNode}
+ * @时间复杂度 O(N)
+ * @空间复杂度 O(N)
  */
 var lowestCommonAncestor_1 = function (root, p, q) {
     let node = null;
