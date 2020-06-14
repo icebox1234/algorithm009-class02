@@ -10,6 +10,7 @@
  * @param {string} endWord
  * @param {string[]} wordList
  * @return {number}
+ * @description DFS
  */
 var ladderLength_1 = function (beginWord, endWord, wordList) {
     let minStep = Number.MAX_SAFE_INTEGER;
@@ -41,6 +42,14 @@ var ladderLength_1 = function (beginWord, endWord, wordList) {
     return minStep === Number.MAX_SAFE_INTEGER ? 0 : minStep;
 };
 
+
+/**
+ * @param {string} beginWord
+ * @param {string} endWord
+ * @param {string[]} wordList
+ * @return {number}
+ * @description BFS
+ */
 var ladderLength = function (beginWord, endWord, wordList) {
     function ladderLengthFn(beginWord, endWord, wordList, visited) {
         let stack = [beginWord];
