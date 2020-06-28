@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode.cn id=91 lang=javascript
  *
- * [91] 解码方法
+ * [32] 最长有效括号
  */
 
 // @lc code=start
